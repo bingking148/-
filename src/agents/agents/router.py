@@ -27,7 +27,11 @@ class RouterAgent:
     async def __call__(self, state: State, config) -> Command[Literal["teacher_agent", "student_agent"]]:
         """根据当前状态进行路由"""
         try:
+            print("RouterAgent: 开始处理")
             curr_question = state.question[0]
+            print(f"RouterAgent: 当前题目: {curr_question['title']}")
+            print(f"RouterAgent: 用户消息: {state.messages}")
+            
             prompt_path = os.path.join(PROMPTS_DIR, "router_agent_prompt.txt")
             with open(prompt_path, "r", encoding="utf-8") as f:
                 prompt = f.read()
@@ -44,14 +48,19 @@ class RouterAgent:
                 explanation=curr_question['reference_answer']['explanation']
             )
             
+            print("RouterAgent: 准备调用 LLM")
             llm = get_llm(model_type=self.model_type)
             if self.model_type == "deepseek":
                 chain = system_prompt | llm.with_structured_output(Evaluation, method="function_calling")
             else:
                 chain = system_prompt | llm.with_structured_output(Evaluation)
+            
+            print("RouterAgent: 调用 LLM")
             router_result = await chain.ainvoke({"messages": state.messages}, config)
+            print(f"RouterAgent: LLM 结果: {router_result}")
             
             goto = "teacher_agent" if router_result['next_agent'] == 'teacher' else "student_agent"
+            print(f"RouterAgent: 路由到: {goto}")
             
             return Command(
                 update={"evaluation": router_result},
@@ -59,6 +68,7 @@ class RouterAgent:
             )
             
         except Exception as e:
+            print(f"RouterAgent: 错误: {str(e)}")
             return Command(
                 update={"log": str(e)},
                 goto="teacher_agent"

@@ -38,6 +38,7 @@ def create_workflow(
     workflow.add_edge(START, "router_agent")
     workflow.add_edge("tool_node", "teacher_agent")
     workflow.add_edge("student_agent", "__end__")
+    workflow.add_edge("teacher_agent", "__end__")
     
     # 添加检查点
     memory = MemorySaver()

@@ -21,20 +21,25 @@ def get_llm(model_type: str = "deepseek", **kwargs):
         return ChatOpenAI(
             model=params.get("model_name", "deepseek-chat"),
             openai_api_key=params.get("api_key") or os.getenv("DEEPSEEK_API_KEY"),
-            openai_api_base='https://api.deepseek.com',
-            **params
+            base_url='https://api.deepseek.com',
+            temperature=params.get("temperature", 0.9),
+            max_tokens=params.get("max_tokens", 4096)
         )
     elif model_type == "qwen2.5":
         return ChatOpenAI(
             model=params.get("model_name", "qwen2.5"),
-            api_key=params.get("api_key") or "EMPTY",
+            openai_api_key=params.get("api_key") or "EMPTY",
             base_url=os.getenv("QWEN2.5_API_BASE", "http://0.0.0.0:6003/v1"),
+            temperature=params.get("temperature", 0.9),
+            max_tokens=params.get("max_tokens", 4096)
         )
     elif model_type == "tongyi":
         return ChatOpenAI(
             model=os.getenv("TONGYI_MODEL"),
-            api_key=os.getenv("TONGYI_API_KEY"),
+            openai_api_key=os.getenv("TONGYI_API_KEY"),
             base_url=os.getenv("TONGYI_API_BASE"),
+            temperature=params.get("temperature", 0.9),
+            max_tokens=params.get("max_tokens", 4096)
         )
     else:
         raise ValueError(f"不支持的模型类型: {model_type}")

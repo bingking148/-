@@ -29,6 +29,16 @@ build/
 # Python test files
 *.log
 
+# Node / frontend artifacts
+**/node_modules/
+**/.cache/
+frontend/build/
+
+# Runtime / local data
+logs/
+*.sqlite3
+.env.*
+
 #others
 ztmp/*
 scripts/rlhf/lora_model/
