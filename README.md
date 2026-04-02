@@ -112,7 +112,7 @@ django1/
 ### 1. 克隆项目
 
 ```bash
-git clone <repository-url>
+git clone git@github.com:bingking148/-.git
 cd django1
 ```
 
