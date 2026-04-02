@@ -1,165 +1,201 @@
-# EasyDS - 基于费曼学习法的考研数据结构教学系统
+# EasyDS - 数据结构智能教学系统
 
+基于 **费曼学习法**（"以教促学"）的 AI 驱动数据结构智能教学系统，面向 CS2026 考研备考。
 
-## 简介
+## 项目简介
 
-EasyDS是一款创新型AI教育系统，专为考研数据结构学习设计。系统采用费曼学习法，通过多智能体协同教学模式，实现深度交互式学习体验。
+EasyDS 是一个多智能体协作的教学系统，涵盖数据结构 8 大核心章节的知识点讲解、题目练习和智能问答。系统通过 **Router-Teacher-Student** 三智能体协作机制，对用户的答题进行评估、追问和纠正，帮助用户深入理解数据结构知识。
 
-## 系统架构
+### 核心工作流
 
-本项目采用**前后端分离架构**：
+1. 用户浏览 **8 个章节**的数据结构知识点
+2. 选择章节中的 **题目** 进行练习
+3. 用自己的语言 **解释解题思路**（费曼学习法）
+4. **多智能体 AI 系统**评估回答：
+   - **Router Agent**：评估答案的正确性和完整性，决定路由
+   - **Student Agent**：对正确但不完整的回答进行追问，加深理解
+   - **Teacher Agent**：对错误回答进行纠正和知识点总结
+5. 通过 **SSE (Server-Sent Events)** 实时流式输出响应
+
+## 技术栈
+
+### 后端
+
+- **Python 3.10+**
+- **Django 4.2** - Web 框架
+- **Django REST Framework** - API 接口
+- **LangGraph** - 多智能体工作流编排
+- **LangChain** - LLM 应用框架（DeepSeek / Qwen2.5 / 通义千问）
+- **Pydantic** - 数据模型校验
+- **PostgreSQL** - 数据库
+
+### 前端
+
+- **React 18** (开发中)
+- **Tailwind CSS** - UI 样式
+- **Marked.js** - Markdown 渲染
+- **Highlight.js** - 代码高亮
+- **MathJax** - 数学公式渲染
+
+### 数据处理
+
+- **PyMuPDF / pdfplumber** - PDF 文本提取
+- **PaddleOCR** - OCR 文字识别
+- **PyTorch / Transformers / PEFT** - RLHF/SFT 模型微调
+
+## 项目结构
 
 ```
-┌─────────────┐      ┌─────────────┐      ┌─────────────┐
-│   React     │◄────►│   Django    │◄────►│  PostgreSQL │
-│  Frontend   │      │    API      │      │   Database  │
-│  (Port 3000)│      │  (Port 8000)│      │  (Port 5432)│
-└─────────────┘      └─────────────┘      └─────────────┘
+django1/
+├── config/                      # 配置文件
+│   ├── db_config.yaml           # 数据库配置
+│   └── paths.py                 # 路径常量
+├── data/                        # 数据文件
+│   ├── DS2026_extracted/         # 提取的 PDF 页面
+│   └── ds_data/                  # 结构化数据
+│       ├── chapters.json         # 章节定义
+│       ├── ds_indices.pkl        # 预构建索引
+│       ├── knowledgepoints/      # 知识点 JSON
+│       ├── questions/            # 题目 JSON
+│       └── data_processing/      # 数据处理脚本
+├── easys_django/                 # Django 项目
+│   ├── manage.py
+│   ├── easys_django/             # 项目配置
+│   │   ├── settings.py
+│   │   ├── settings_base.py
+│   │   ├── settings_dev.py
+│   │   ├── settings_prod.py
+│   │   └── urls.py
+│   ├── apps/
+│   │   ├── core/                 # 页面渲染应用
+│   │   └── api/                  # REST API 应用
+│   ├── templates/                # HTML 模板
+│   └── static/                   # 静态资源 (CSS/JS)
+├── frontend/                     # React 前端 (开发中)
+├── src/                          # 核心业务逻辑
+│   ├── knowledge_qa_system.py    # QA 系统主入口
+│   ├── agents/                   # 多智能体系统
+│   │   ├── agents/
+│   │   │   ├── router.py         # 路由智能体
+│   │   │   ├── teacher.py        # 教师智能体
+│   │   │   └── student.py        # 学生智能体
+│   │   ├── models.py             # LLM 模型工厂
+│   │   ├── workflow.py           # LangGraph 工作流
+│   │   └── prompts/              # 系统提示词
+│   ├── database/
+│   │   └── schema.py             # 数据模型定义
+│   └── models/rlhf/sft/          # SFT 微调流水线
+└── .env                          # 环境变量
 ```
 
-| 层级 | 技术 | 说明 |
-|------|------|------|
-| 前端 | React 18 + React Router 6 | 用户界面、SPA单页应用 |
-| 后端 | Django + DRF | RESTful API、SSE流式响应 |
-| AI | LangGraph + DeepSeek | 多智能体协同教学 |
+## 章节内容
+
+| 章节 | 内容 |
+|------|------|
+| 第 1 章 | 绪论 |
+| 第 2 章 | 线性表 |
+| 第 3 章 | 栈、队列和数组 |
+| 第 4 章 | 串 |
+| 第 5 章 | 树与二叉树 |
+| 第 6 章 | 图 |
+| 第 7 章 | 查找 |
+| 第 8 章 | 排序 |
 
 ## 快速开始
 
 ### 环境要求
 
-- Python 3.11+
-- Node.js 16+
-- PostgreSQL（或SQLite用于开发）
+- Python 3.10+
+- Node.js 16+ (前端开发)
+- PostgreSQL 14+
 
-### 1. 克隆项目并安装依赖
+### 1. 克隆项目
 
 ```bash
-git clone https://github.com/yourusername/EasyDS.git
-cd EasyDS
+git clone <repository-url>
+cd django1
+```
 
-# 安装后端依赖
+### 2. 安装 Python 依赖
+
+```bash
 pip install -r requirements.txt
+```
 
-# 安装前端依赖
+### 3. 配置环境变量
+
+复制 `.env` 文件并填入你的配置：
+
+```env
+# LLM API Keys
+DEEPSEEK_API_KEY=your_deepseek_api_key
+TONGYI_API_KEY=your_tongyi_api_key
+
+# Django
+DJANGO_SECRET_KEY=your_secret_key
+DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1
+
+# PostgreSQL
+POSTGRES_DB=easys_db
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=your_password
+POSTGRES_HOST=127.0.0.1
+POSTGRES_PORT=5432
+```
+
+### 4. 初始化数据库
+
+```bash
+cd easys_django
+python manage.py migrate
+```
+
+### 5. 启动开发服务器
+
+```bash
+python manage.py runserver
+```
+
+访问 http://127.0.0.1:8000 即可使用系统。
+
+### 6. 启动前端开发服务器（可选）
+
+```bash
 cd frontend
 npm install
-cd ..
-```
-
-### 2. 配置环境变量
-
-编辑 `.env` 文件：
-```bash
-# DeepSeek API 配置
-DEEPSEEK_API_KEY=your-deepseek-api-key
-```
-
-### 3. 启动后端服务
-
-```bash
-# Windows
-run_django.bat
-
-# Linux/Mac
-bash run_django.sh
-```
-
-后端将运行在 **http://localhost:8000**
-
-### 4. 启动前端服务
-
-新开一个终端窗口：
-```bash
-cd frontend
 npm start
 ```
 
-前端将运行在 **http://localhost:3000**
+前端开发服务器默认运行在 http://localhost:3000，自动代理 API 请求到 Django 后端。
 
-### 5. 访问应用
+## API 接口
 
-打开浏览器访问：**http://localhost:3000**
+所有 API 接口以 `/api/` 为前缀：
 
-## 项目结构
+| 接口 | 说明 |
+|------|------|
+| `/api/chapters/` | 获取章节列表 |
+| `/api/chapters/<id>/questions/` | 获取章节题目 |
+| `/api/knowledge-points/` | 获取知识点 |
+| `/api/chat/<session_id>/` | SSE 流式对话 |
+| `/api/sessions/` | 会话管理 |
 
-```
-EasyDS/
-├── frontend/               # React前端项目
-│   ├── src/
-│   │   ├── components/    # 可复用组件
-│   │   ├── pages/         # 页面组件
-│   │   │   ├── Home.js         # 首页
-│   │   │   ├── Problems.js     # 题目列表
-│   │   │   ├── Knowledge.js    # 知识库
-│   │   │   └── Chat.js         # AI聊天
-│   │   ├── services/
-│   │   │   └── api.js     # API服务层
-│   │   └── styles.css     # 全局样式
-│   └── package.json
-├── easys_django/          # Django后端项目
-│   ├── apps/
-│   │   ├── api/          # API应用
-│   │   └── core/         # 核心服务
-│   └── manage.py
-├── src/                  # 智能体系统（共用）
-│   ├── agents/           # 智能体实现
-│   └── knowledge_qa_system.py
-└── data/                 # 数据文件
-```
+## 数据处理
 
-## 技术特点
+### PDF 数据提取
 
-- **前后端分离**：React 前端 + Django REST API
-- **实时通信**：Server-Sent Events (SSE) 实现流式AI回复
-- **多智能体**：路由Agent、学生Agent、教师Agent协同
-- **RAG增强**：基于知识库的精准知识点讲解
-- **跨域支持**：CORS配置完善，支持独立部署
-
-## API接口
-
-基础URL: `http://localhost:8000/api`
-
-| 接口 | 方法 | 说明 |
-|------|------|------|
-| `/chapters` | GET | 获取所有章节 |
-| `/chapters/{id}/questions` | GET | 获取章节问题列表 |
-| `/questions/{id}` | GET | 获取问题详情 |
-| `/sessions` | POST | 创建会话 |
-| `/sessions/{id}/messages` | GET | 发送消息（SSE流式） |
-| `/knowledge/chapters` | GET | 获取知识点分布 |
-
-更多接口详见 [README_Separated.md](README_Separated.md)
-
-## 使用指南
-
-1. **题目讲解**：选择章节题目，尝试自己讲解解题思路
-2. **智能评估**：AI实时评估回答的正确性和完整性
-3. **互动反馈**：
-   - 回答正确但不完整 → 学生Agent追问
-   - 回答不正确 → 教师Agent纠错指导
-   - 回答正确且完整 → 教师Agent总结强化
-
-## 生产部署
-
-### 前端构建
 ```bash
-cd frontend
-npm run build
+cd data/ds_data/data_processing
+python pdf_extractor.py    # 提取 PDF 文本
+python index_builder.py    # 构建索引
 ```
 
-### 后端部署
+### 知识点摘要生成
+
 ```bash
-cd easys_django
-gunicorn easys_django.wsgi:application -b 0.0.0.0:8000
+python parallel_data_creation.py  # 使用 DeepSeek 批量生成知识点摘要
 ```
-
-详细部署说明见 [README_Separated.md](README_Separated.md)
 
 ## 许可证
 
-MIT License
-
-## 联系方式
-
-- 项目维护者：OphiraShen
-- 电子邮件：ophira.shenyige@outlook.com
+本项目仅供学习交流使用。

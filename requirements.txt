@@ -1,0 +1,39 @@
+# ============================================
+# EasyDS - 数据结构智能教学系统 依赖列表
+# ============================================
+
+# ---------- Django Web 框架 ----------
+Django>=4.2,<5.0
+djangorestframework>=3.14
+django-cors-headers>=4.0
+python-dotenv>=1.0
+
+# ---------- LLM / AI ----------
+langchain-core>=0.3
+langchain-openai>=0.2
+langchain-community>=0.3
+langchain-deepseek>=0.1
+langgraph>=0.2
+pydantic>=2.0
+
+# ---------- 数据处理 ----------
+PyMuPDF>=1.23
+pdfplumber>=0.10
+Pillow>=10.0
+pdf2image>=1.16
+paddleocr>=2.7
+paddlepaddle>=2.5
+numpy>=1.24
+tqdm>=4.66
+
+# ---------- 数据库 ----------
+psycopg2-binary>=2.9
+
+# ---------- RLHF / SFT 模型微调 (可选) ----------
+torch>=2.0
+transformers>=4.35
+peft>=0.7
+accelerate>=0.24
+
+# ---------- 其他工具 ----------
+PyYAML>=6.0
