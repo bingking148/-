@@ -41,8 +41,6 @@ logs/
 .env.*
 config/runtime_settings.json
 
-# Data files (large datasets, images, extracted PDFs)
-repo/data/
 
 # ML model artifacts
 ztmp/

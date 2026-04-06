@@ -40,8 +40,6 @@ logs/
 .env.*
 config/runtime_settings.json
 
-# Data files (large datasets, images, extracted PDFs)
-data/
 
 #others
 ztmp/*
