@@ -1,0 +1,86 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-base: #0a0c10;
+  --color-surface: rgba(255, 255, 255, 0.04);
+  --color-surface-hover: rgba(255, 255, 255, 0.1);
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-accent: #6ee7b7;
+  --color-accent-dim: rgba(110, 231, 183, 0.25);
+  --color-accent-glow: rgba(110, 231, 183, 0.4);
+  
+  --font-sans: "Inter", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif";
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--color-base)] text-gray-300 font-sans antialiased overflow-x-hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-white font-medium tracking-tight;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-[var(--color-surface)] backdrop-blur-2xl border border-[var(--color-border)] shadow-[0_8px_32px_0_rgba(0,0,0,0.6)];
+  }
+  
+  .glass-card {
+    @apply bg-[var(--color-surface)] backdrop-blur-2xl border border-[var(--color-border)] shadow-[0_8px_32px_0_rgba(0,0,0,0.6)] rounded-2xl transition-all duration-500 ease-out hover:bg-[var(--color-surface-hover)] hover:shadow-[0_15px_60px_0_var(--color-accent-dim)] hover:-translate-y-1 relative overflow-hidden;
+  }
+  
+  .glass-card::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-br from-[rgba(255,255,255,0.08)] to-transparent opacity-0 transition-opacity duration-500 pointer-events-none;
+  }
+  
+  .glass-card:hover::before {
+    @apply opacity-100;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gray-50 via-gray-200 to-gray-500;
+  }
+  
+  .text-gradient-accent {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[var(--color-accent)] to-teal-400 drop-shadow-[0_0_15px_var(--color-accent-glow)];
+  }
+  
+  .glow-border {
+    @apply absolute inset-0 rounded-2xl border border-[var(--color-border)] pointer-events-none;
+    mask-image: linear-gradient(to bottom, white, transparent);
+  }
+}
+
+/* Custom Scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-base);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-hover);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Semi-transparent scrollbar for glass containers */
+.glass-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.glass-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.glass-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+.glass-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}

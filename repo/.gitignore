@@ -1,0 +1,58 @@
+# Python bytecode files
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Virtual environments
+venv/
+env/
+.env
+.venv/
+
+# Distribution / packaging
+*.egg
+*.egg-info
+dist/
+build/
+
+# PyInstaller
+*.spec
+
+# IDE or text editor settings
+.vscode/
+.idea/
+*.swp
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Python test files
+*.log
+
+# Node / frontend artifacts
+**/node_modules/
+**/.cache/
+frontend/build/
+
+# Runtime / local data
+logs/
+*.sqlite3
+.env.*
+config/runtime_settings.json
+
+# Data files (large datasets, images, extracted PDFs)
+data/
+
+#others
+ztmp/*
+scripts/rlhf/lora_model/
+/scripts/rlhf/lora_model/
+lora_model/*
+rola_config/*
+checkpoints/*
+openrlhf_workspace/checkpoints/*
+
+# Root level artifacts
+nul
+
+
