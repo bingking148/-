@@ -1,0 +1,40 @@
+# ============================================
+# EasyDS dependencies
+# ============================================
+
+# ---------- Django ----------
+Django>=4.2,<5.0
+djangorestframework>=3.14
+django-cors-headers>=4.0
+python-dotenv>=1.0
+
+# ---------- LLM / AI ----------
+langchain-core>=0.3
+langchain-openai>=0.2
+langchain-community>=0.3
+langchain-deepseek>=0.1
+langgraph>=0.2
+pydantic>=2.0
+uvicorn>=0.34
+
+# ---------- Data processing ----------
+PyMuPDF>=1.23
+pdfplumber>=0.10
+Pillow>=10.0
+pdf2image>=1.16
+paddleocr>=2.7
+paddlepaddle>=2.5
+numpy>=1.24
+tqdm>=4.66
+
+# ---------- Database ----------
+psycopg2-binary>=2.9
+
+# ---------- RLHF / SFT ----------
+torch>=2.0
+transformers>=4.35
+peft>=0.7
+accelerate>=0.24
+
+# ---------- Utilities ----------
+PyYAML>=6.0

@@ -1,0 +1,91 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-base: #ffffff;
+  --color-surface: rgba(255, 255, 255, 0.78);
+  --color-surface-hover: rgba(255, 255, 255, 0.92);
+  --color-border: rgba(15, 23, 42, 0.1);
+  --color-accent: #6ee7b7;
+  --color-accent-dim: rgba(110, 231, 183, 0.25);
+  --color-accent-glow: rgba(110, 231, 183, 0.28);
+
+  --color-text: #0f172a;
+  --color-text-muted: rgba(15, 23, 42, 0.62);
+  --color-text-subtle: rgba(15, 23, 42, 0.48);
+  --color-on-accent: #052e1b;
+  
+  --font-sans: "Inter", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif";
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--color-base)] text-[var(--color-text)] font-sans antialiased overflow-x-hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-[var(--color-text)] font-medium tracking-tight;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-[var(--color-surface)] backdrop-blur-2xl border border-[var(--color-border)] shadow-[0_10px_30px_rgba(15,23,42,0.08)];
+  }
+  
+  .glass-card {
+    @apply bg-[var(--color-surface)] backdrop-blur-2xl border border-[var(--color-border)] shadow-[0_10px_30px_rgba(15,23,42,0.08)] rounded-2xl transition-all duration-500 ease-out hover:bg-[var(--color-surface-hover)] hover:shadow-[0_18px_60px_rgba(110,231,183,0.18)] hover:-translate-y-1 relative overflow-hidden;
+  }
+  
+  .glass-card::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-br from-[rgba(110,231,183,0.12)] to-transparent opacity-0 transition-opacity duration-500 pointer-events-none;
+  }
+  
+  .glass-card:hover::before {
+    @apply opacity-100;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-slate-950 via-slate-700 to-slate-500;
+  }
+  
+  .text-gradient-accent {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[var(--color-accent)] to-teal-500 drop-shadow-[0_0_12px_var(--color-accent-glow)];
+  }
+  
+  .glow-border {
+    @apply absolute inset-0 rounded-2xl border border-[var(--color-border)] pointer-events-none;
+    mask-image: linear-gradient(to bottom, white, transparent);
+  }
+}
+
+/* Custom Scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-base);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(15, 23, 42, 0.16);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(15, 23, 42, 0.28);
+}
+
+/* Semi-transparent scrollbar for glass containers */
+.glass-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.glass-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.glass-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(15, 23, 42, 0.18);
+  border-radius: 10px;
+}
+.glass-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(15, 23, 42, 0.3);
+}
