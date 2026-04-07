@@ -526,6 +526,10 @@ export const APIService = {
     await readStream(response, callbacks, signal);
   },
 
+  deleteSession: async (sessionId: string): Promise<void> => {
+    await api.delete(`/sessions/${encodeURIComponent(sessionId)}`);
+  },
+
   getModelSettings: async (): Promise<ModelSettingsStatus> => {
     const response = await getWithFallback<ModelSettingsStatus>(['/settings/model', '/settings/model/']);
     return response.data;

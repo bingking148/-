@@ -1,0 +1,13 @@
+- [x] api.ts 中有 deleteSession 方法
+- [x] deleteSession 方法正确调用 DELETE /sessions/<session_id> 接口
+- [x] PracticeChat 组件导入 Trash2 或 Eraser 图标
+- [x] PracticeChat 组件有"清空会话"按钮
+- [x] 按钮在没有会话时处于禁用状态
+- [x] 点击按钮显示确认对话框
+- [x] 确认对话框有"取消"和"确认"按钮
+- [x] 确认后调用 deleteSession API
+- [x] 删除成功后清空前端聊天记录
+- [x] 删除成功后重置会话 ID
+- [x] 界面显示空会话状态（费曼学习区提示）
+- [x] 删除失败时显示错误提示
+- [x] 删除失败时不清空聊天记录

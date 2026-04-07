@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState, useTransition } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowLeft, ChevronLeft, ChevronRight, Trash2 } from 'lucide-react';
 
 import ChatComposer from '../components/practice/ChatComposer';
 import ChatMessageList from '../components/practice/ChatMessageList';
@@ -35,6 +35,9 @@ const PracticeChat = () => {
   const flushTimerRef = useRef<number | null>(null);
   const [isPending, startTransition] = useTransition();
   const stickToBottomRef = useRef(true);
+  const [showClearConfirm, setShowClearConfirm] = useState(false);
+  const [clearing, setClearing] = useState(false);
+  const currentNodeRef = useRef<string | undefined>(undefined);
 
   const chatKey = chapterId && questionId ? `${chapterId}:${questionId}` : '';
   const chatState = chatKey ? chatByQuestion[chatKey] : undefined;
@@ -224,6 +227,7 @@ const PracticeChat = () => {
             {
               ...lastMessage,
               content: `${lastMessage.content}${chunk}`,
+              node: currentNodeRef.current || lastMessage.node,
             },
           ],
         },
@@ -237,6 +241,7 @@ const PracticeChat = () => {
     }
 
     stickToBottomRef.current = true;
+    currentNodeRef.current = undefined;
     const userMessage = input.trim();
 
     setInputByQuestion((prev) => ({ ...prev, [chatKey]: '' }));
@@ -276,7 +281,7 @@ const PracticeChat = () => {
           ...prev,
           [chatKey]: {
             ...current,
-            chatHistory: [...current.chatHistory, { role: 'agent', content: '' }],
+            chatHistory: [...current.chatHistory, { role: 'agent', content: '', node: currentNodeRef.current }],
           },
         };
       });
@@ -292,6 +297,9 @@ const PracticeChat = () => {
             if (payload?.content) {
               pendingChunkRef.current += String(payload.content);
               scheduleFlush();
+            }
+            if (payload?.node) {
+              currentNodeRef.current = payload.node;
             }
           },
         },
@@ -326,6 +334,25 @@ const PracticeChat = () => {
     });
   };
 
+  const handleClearSession = async () => {
+    if (!sessionId || clearing) {
+      return;
+    }
+    setClearing(true);
+    try {
+      await APIService.deleteSession(sessionId);
+      setChatByQuestion((prev) => ({
+        ...prev,
+        [chatKey]: { chatHistory: [], sessionId: null },
+      }));
+      setShowClearConfirm(false);
+    } catch (err) {
+      setError(getApiErrorMessage(err, '清空会话失败'));
+    } finally {
+      setClearing(false);
+    }
+  };
+
   if (loading) {
     return (
       <div className="flex min-h-[50vh] items-center justify-center">
@@ -357,6 +384,15 @@ const PracticeChat = () => {
 
           <div className="flex items-center gap-2">
             <button
+              onClick={() => setShowClearConfirm(true)}
+              disabled={!sessionId || isStreaming || isPending || clearing}
+              className="inline-flex items-center gap-1 rounded-full bg-[rgba(15,23,42,0.03)] px-3 py-2 text-sm transition-colors hover:bg-red-50 hover:text-red-600 disabled:opacity-40"
+              title="清空会话"
+            >
+              <Trash2 className="h-4 w-4" />
+              清空
+            </button>
+            <button
               onClick={() => handleJump(prevQuestionId)}
               disabled={!prevQuestionId || isStreaming || isPending}
               className="inline-flex items-center gap-1 rounded-full bg-[rgba(15,23,42,0.03)] px-3 py-2 text-sm transition-colors hover:bg-[rgba(15,23,42,0.05)] disabled:opacity-40"
@@ -376,6 +412,38 @@ const PracticeChat = () => {
         </div>
         {error ? <div className="mt-3 text-xs text-red-600">{error}</div> : null}
       </div>
+
+      {showClearConfirm && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+          <div className="glass-card max-w-sm p-6">
+            <h3 className="mb-2 text-lg font-medium text-[var(--color-text)]">确认清空会话</h3>
+            <p className="mb-4 text-sm text-[var(--color-text-muted)]">
+              确定要清空当前会话吗？此操作不可恢复。
+            </p>
+            <div className="flex justify-end gap-2">
+              <button
+                onClick={() => setShowClearConfirm(false)}
+                disabled={clearing}
+                className="rounded-full bg-[rgba(15,23,42,0.03)] px-4 py-2 text-sm transition-colors hover:bg-[rgba(15,23,42,0.05)]"
+              >
+                取消
+              </button>
+              <button
+                onClick={handleClearSession}
+                disabled={clearing}
+                className="inline-flex items-center gap-1 rounded-full bg-red-500 px-4 py-2 text-sm text-white transition-colors hover:bg-red-600 disabled:opacity-60"
+              >
+                {clearing ? (
+                  <div className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
+                ) : (
+                  <Trash2 className="h-4 w-4" />
+                )}
+                确认
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       <div className="flex min-h-0 flex-1 gap-6">
         <div className="flex min-h-0 w-[420px] shrink-0 flex-col">
