@@ -158,15 +158,10 @@ class KnowledgeQASystem:
         return '\n\n'.join(parts)
 
     async def _fallback_stream(self, answer: str, question: Dict):
-        fallback_messages = [
-            ('student_agent', self._build_student_fallback(answer, question)),
-            ('teacher_agent', self._build_teacher_fallback(question)),
-        ]
-
-        for node, text in fallback_messages:
-            for chunk in self._chunk_text(text):
-                yield chunk, node
-                await asyncio.sleep(0.02)
+        text = '请先配置 API Key 后再开始对话。你可以在「模型设置」页面中填写你的 DeepSeek API Key。'
+        for chunk in self._chunk_text(text):
+            yield chunk, 'system'
+            await asyncio.sleep(0.02)
 
     def _get_session(self, user, session_id: str) -> ConversationSession:
         self._require_authenticated_user(user)

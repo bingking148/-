@@ -250,16 +250,16 @@ const ModelSettings = () => {
               </div>
             ) : (
               <div className="space-y-4">
-                <div className="rounded-2xl border border-[var(--color-border)] bg-[rgba(15,23,42,0.02)] px-4 py-4">
-                  <div className="mb-2 text-xs uppercase tracking-[0.28em] text-[var(--color-text-subtle)]">密钥状态</div>
-                  <div className="text-base font-medium text-[var(--color-text)]">
+                <div className="rounded-2xl border border-[var(--color-border)] bg-slate-100 px-4 py-4">
+                  <div className="mb-2 text-xs uppercase tracking-[0.28em] text-slate-500">密钥状态</div>
+                  <div className="text-base font-semibold text-slate-900">
                     {hasConfiguredKey ? settings?.masked_key : '尚未提供 API Key'}
                   </div>
                 </div>
 
-                <div className="rounded-2xl border border-[var(--color-border)] bg-[rgba(15,23,42,0.02)] px-4 py-4">
-                  <div className="mb-2 text-xs uppercase tracking-[0.28em] text-[var(--color-text-subtle)]">配置来源</div>
-                  <div className="text-base font-medium text-[var(--color-text)]">{sourceLabel}</div>
+                <div className="rounded-2xl border border-[var(--color-border)] bg-slate-100 px-4 py-4">
+                  <div className="mb-2 text-xs uppercase tracking-[0.28em] text-slate-500">配置来源</div>
+                  <div className="text-base font-semibold text-slate-900">{sourceLabel}</div>
                 </div>
 
                 <button
