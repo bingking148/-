@@ -3,8 +3,8 @@
 
 @theme {
   --color-base: #ffffff;
-  --color-surface: rgba(255, 255, 255, 0.78);
-  --color-surface-hover: rgba(255, 255, 255, 0.92);
+  --color-surface: rgba(255, 255, 255, 0.95);
+  --color-surface-hover: rgba(255, 255, 255, 0.98);
   --color-border: rgba(15, 23, 42, 0.1);
   --color-accent: #6ee7b7;
   --color-accent-dim: rgba(110, 231, 183, 0.25);
@@ -34,14 +34,14 @@
   }
   
   .glass-card {
-    @apply bg-[var(--color-surface)] backdrop-blur-2xl border border-[var(--color-border)] shadow-[0_10px_30px_rgba(15,23,42,0.08)] rounded-2xl transition-all duration-500 ease-out hover:bg-[var(--color-surface-hover)] hover:shadow-[0_18px_60px_rgba(110,231,183,0.18)] hover:-translate-y-1 relative overflow-hidden;
+    @apply bg-[var(--color-surface)] backdrop-blur-2xl border border-[var(--color-border)] shadow-[0_10px_30px_rgba(15,23,42,0.08)] rounded-2xl transition-all duration-500 ease-out hover:bg-[var(--color-surface-hover)] hover:shadow-[0_18px_60px_rgba(110,231,183,0.18)] hover:-translate-y-1 relative;
   }
-  
+
   .glass-card::before {
     content: '';
-    @apply absolute inset-0 bg-gradient-to-br from-[rgba(110,231,183,0.12)] to-transparent opacity-0 transition-opacity duration-500 pointer-events-none;
+    @apply absolute inset-0 rounded-2xl bg-gradient-to-br from-[rgba(110,231,183,0.12)] to-transparent opacity-0 transition-opacity duration-500 pointer-events-none;
   }
-  
+
   .glass-card:hover::before {
     @apply opacity-100;
   }

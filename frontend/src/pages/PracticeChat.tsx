@@ -379,16 +379,11 @@ const PracticeChat = () => {
       <div className="flex min-h-0 flex-1 gap-6">
         <div className="flex min-h-0 w-[420px] shrink-0 flex-col">
           <div className="glass-card flex min-h-0 flex-col border-l-4 border-l-[var(--color-accent)] p-6 shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
-            <div className="mb-3 flex shrink-0 items-start justify-between">
+            <div className="mb-3 flex shrink-0 items-start">
               <h2 className="text-xl font-medium text-[var(--color-text)]">当前题目</h2>
-              {question?.difficulty ? (
-                <span className="rounded-full border border-[var(--color-border)] bg-[rgba(15,23,42,0.03)] px-3 py-1 text-xs text-[var(--color-text-subtle)]">
-                  {question.difficulty}
-                </span>
-              ) : null}
             </div>
             <div className="glass-scrollbar min-h-0 overflow-y-auto pr-2">
-              <div className="whitespace-pre-wrap text-base leading-relaxed text-[var(--color-text)]">
+              <div className="whitespace-pre-wrap text-base leading-relaxed text-slate-900" style={{ color: '#0f172a' }}>
                 {question?.content || '题目不存在或加载失败。'}
               </div>
             </div>

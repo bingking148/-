@@ -217,13 +217,8 @@ const Practice = () => {
         {/* Current Question Banner */}
         <div className="glass-card p-6 shrink-0 border-l-4 border-l-[var(--color-accent)] shadow-[0_4px_20px_rgba(0,0,0,0.4)] relative overflow-visible">
           <div className="absolute -left-[2px] top-1/2 -translate-y-1/2 w-1 h-12 bg-[var(--color-accent)] blur-[8px]" />
-          <div className="flex justify-between items-start mb-3">
+          <div className="mb-3">
             <h2 className="text-xl font-medium text-white drop-shadow-md">当前题目</h2>
-            {activeQuestion?.difficulty && (
-              <span className="text-xs px-3 py-1 rounded-full border border-[var(--color-border)] bg-[rgba(255,255,255,0.05)] text-gray-300 shadow-[0_2px_10px_rgba(0,0,0,0.2)]">
-                {activeQuestion.difficulty}
-              </span>
-            )}
           </div>
           <div className="text-gray-200 text-lg leading-relaxed whitespace-pre-wrap">{activeQuestion?.content || "请从左侧选择题目开始练习。"}</div>
         </div>

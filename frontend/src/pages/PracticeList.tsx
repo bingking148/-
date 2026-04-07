@@ -144,7 +144,6 @@ const PracticeList = () => {
                   <div className="flex items-start gap-4">
                     <div className="flex-1">
                       <div className="text-sm leading-relaxed text-[var(--color-text)] line-clamp-2">{q.content}</div>
-                      {q.difficulty ? <div className="mt-2 text-xs text-[var(--color-text-subtle)]">难度：{q.difficulty}</div> : null}
                     </div>
                     <div className="w-9 h-9 rounded-full bg-[var(--color-surface)] border border-[var(--color-border)] flex items-center justify-center shrink-0 text-[var(--color-text-muted)] group-hover:bg-[var(--color-accent)] group-hover:border-[var(--color-accent)] group-hover:text-[var(--color-on-accent)] transition-colors duration-200 shadow-[0_6px_16px_rgba(15,23,42,0.10)]">
                       <ArrowRight className="w-4 h-4" />

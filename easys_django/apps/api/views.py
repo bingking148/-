@@ -5,6 +5,7 @@ from functools import wraps
 
 from django.contrib.auth import authenticate, get_user_model
 from django.http import JsonResponse, StreamingHttpResponse
+from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
 from rest_framework import status
 from rest_framework.authtoken.models import Token
@@ -211,6 +212,7 @@ def delete_session(request, session_id):
     return Response({'message': 'Session deleted'})
 
 
+@csrf_exempt
 @require_http_methods(['POST'])
 def send_message(request, session_id):
     user = authenticate_stream_request(request)

@@ -1,0 +1,5 @@
+- [x] `glass-card` CSS 类不再包含 `overflow-hidden`
+- [x] 所有需要 `overflow-hidden` 的 `glass-card` 实例已单独补充该样式（确认已有实例无需修改）
+- [x] 聊天消息列表（ChatMessageList）可以独立上下滚动
+- [x] 左侧题目面板内容可以独立上下滚动
+- [x] 其他页面使用 `glass-card` 的组件视觉效果无回归（圆角裁剪、hover 动效等正常）
