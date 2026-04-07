@@ -58,7 +58,7 @@ export interface KnowledgePoint {
 export interface SessionMessage {
   role: 'user' | 'agent';
   content: string;
-  node?: string;
+  node?: string;  // 'teacher_agent' | 'student_agent' | 'router_agent' | etc.
   created_at?: string;
 }
 

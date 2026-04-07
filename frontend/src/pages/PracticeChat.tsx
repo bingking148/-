@@ -12,7 +12,7 @@ import {
   type StreamChunkPayload,
 } from '../services/api';
 
-type ChatMessage = { role: 'user' | 'agent'; content: string };
+type ChatMessage = { role: 'user' | 'agent'; content: string; node?: string };
 
 const PracticeChat = () => {
   const { chapterId, questionId } = useParams();
@@ -115,6 +115,7 @@ const PracticeChat = () => {
     messages.map((message) => ({
       role: message.role === 'user' ? 'user' : 'agent',
       content: message.content || '',
+      node: message.node,
     }));
 
   useEffect(() => {

@@ -1,0 +1,12 @@
+- [x] api.ts 中的 SessionMessage 接口包含 node 字段
+- [x] api.ts 中的 ChatMessage 类型包含 node 字段
+- [x] API 响应处理时正确传递 node 字段
+- [x] ChatMessageList 组件导入 GraduationCap、Lightbulb 图标
+- [x] 教师智能体消息显示 GraduationCap 图标和"教师"标签
+- [x] 教师智能体消息使用紫色/蓝色主题色
+- [x] 学生智能体消息显示 Lightbulb 图标和"学生"标签
+- [x] 学生智能体消息使用绿色/青色主题色
+- [x] 默认/未知类型智能体保持现有 Cpu 图标样式
+- [x] PracticeChat 的 hydrateSessionState 保留 node 字段
+- [x] 流式消息处理正确传递 node 字段
+- [x] 前端页面中教师和学生智能体消息有明显视觉区别
