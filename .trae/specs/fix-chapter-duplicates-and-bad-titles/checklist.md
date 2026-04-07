@@ -1,0 +1,9 @@
+- [x] chapters.json 中第02、07、08章的 knowledge_points 数组无重复 ID
+- [x] all_knowledgepoints.json 中 kc0391、kc0634、kc086597、kc0839、kc0847 的 title 已修正为合法知识点名称
+- [x] chapter_3.json 中 kc0391 的 title 已修正
+- [x] chapter_6.json 中 kc0634 的 title 已修正
+- [x] chapter_8.json 中 kc086597、kc0839、kc0847 的 title 已修正
+- [x] 前端 api.ts 的 getChapterKnowledgePointMap() 对知识点 ID 列表做了去重处理
+- [x] ds_indices.pkl 已重新构建
+- [x] 前端页面中章节知识点列表无重复项
+- [x] 前端页面中不再显示 OCR 错误标题的知识点

@@ -998,7 +998,7 @@
     {
         "id": "q032010",
         "title": "循环队列与链式队列问题",
-        "content": "假设用A[O..n]实现循环队列，front、rear分别指向队首元素的前一个位置和队尾\n元素。若用（rear+l）（n+l）==front作为队满标志，则（）。\nA.可用front==rear作为队空标志B.队列中最多可有n+l个元素\nC.可用front>rear作为队空标志\nD.可用（front+1)%（n+1）==rear作为队空标志\n11．与顺序队列相比，链式队列的（）。\nA.优点是队列的长度不受限制\nB.优点是入队和出队时间效率更高\nC.缺点是不能进行顺序访问\nD.缺点是不能根据队首指针和队尾指针计算队列的长度",
+        "content": "假设用A[O..n]实现循环队列，front、rear分别指向队首元素的前一个位置和队尾\n元素。若用（rear+l）（n+l）==front作为队满标志，则（）。\nA.可用front==rear作为队空标志B.队列中最多可有n+l个元素\nC.可用front>rear作为队空标志\nD.可用（front+1)%（n+1）==rear作为队空标志",
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
@@ -1106,7 +1106,7 @@
     {
         "id": "q032015",
         "title": "链式队列删除与入队操作",
-        "content": "用链式存储方式的队列进行删除操作时需要（）。\nA.仅修改头指针\nB.仅修改尾指针\nC．头尾指针都要修改\nD.头尾指针可能都要修改\n16．在一个链式队列中，假设队首指针为front，队尾指针为rear，x所指向的元素需要\n入队，则需要执行的操作为（）。\nA.front=x,front=front->next\nB.x->next=front->next,front=x\nC.rear->next=x,rear=x\nD.rear->next=x,x->next=NuLL,rear=x",
+        "content": "用链式存储方式的队列进行删除操作时需要（）。\nA.仅修改头指针\nB.仅修改尾指针\nC．头尾指针都要修改\nD.头尾指针可能都要修改",
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
@@ -1133,7 +1133,7 @@
     {
         "id": "q032017",
         "title": "循环单链表队列时间复杂度与队列序列问题",
-        "content": "假设循环单链表表示的队列长度为n，队头固定在链表尾，若只设头指针，则入队操作\n的时间复杂度为（）。\nA. O(n)\nB. O(1)\nC. 0(n²)\nD. O(nlog2n)\n18．假设输入序列为1,2,3,4,5，利用两个队列进行出入队操作，不可能输出的序列是（）。\nA.1,2,3,4,5\nB.5,2,3,4,1\nC.1,3,2,4,5\nD.4,1,5,2,3",
+        "content": "假设循环单链表表示的队列长度为n，队头固定在链表尾，若只设头指针，则入队操作\n的时间复杂度为（）。\nA. O(n)\nB. O(1)\nC. 0(n²)\nD. O(nlog2n)",
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
@@ -1241,7 +1241,7 @@
     {
         "id": "q033002",
         "title": "表达式与队列题目",
-        "content": "表达式a*（b+c)-d的后级表达式是（\n)。\nA.abcd*+-\nB.abc+*d-\nC.abc*+d-\nD. -+*abcd\n03．下面（）用到了队列。\nA.括号匹配\nB.表达式求值\nC.递归\nD.FIFO页面替换算法",
+        "content": "表达式a*（b+c)-d的后级表达式是（\n)。\nA.abcd*+-\nB.abc+*d-\nC.abc*+d-\nD. -+*abcd",
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
@@ -1381,7 +1381,7 @@
     {
         "id": "q033008",
         "title": "递归与非递归算法效率比较",
-        "content": "对于一个问题的递归算法求解和其相对应的非递归算法求解，（）。\nA.递归算法通常效率高一些\nB.非递归算法通常效率高一些\nC.两者相同\nD.无法比较\n09．执行函数时，其局部变量一般采用（）进行存储。\nA.树形结构\nB.静态链表\nC.栈结构\nD.队列结构",
+        "content": "对于一个问题的递归算法求解和其相对应的非递归算法求解，（）。\nA.递归算法通常效率高一些\nB.非递归算法通常效率高一些\nC.两者相同\nD.无法比较",
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
@@ -1409,7 +1409,7 @@
     {
         "id": "q033010",
         "title": "队列辅助操作与线性表特性",
-        "content": "执行（）操作时，需要使用队列作为辅助存储空间。\nA.查找散列（哈希）表\nB.广度优先搜索图\nC.前序（根）遍历二叉树\nD.深度优先搜索图\n11．下列说法中，正确的是（）。\nA.消除递归不一定需要使用栈\nB.对同一输入序列进行两组不同的合法入栈和出栈组合操作，所得的输出序列也一定相同\nC.通常使用队列来处理函数或过程调用\nD.队列和栈都是运算受限的线性表，只允许在表的两端进行运算",
+        "content": "执行（）操作时，需要使用队列作为辅助存储空间。\nA.查找散列（哈希）表\nB.广度优先搜索图\nC.前序（根）遍历二叉树\nD.深度优先搜索图",
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
@@ -1765,7 +1765,7 @@
     {
         "id": "q034009",
         "title": "稀疏矩阵压缩存储缺点",
-        "content": "稀疏矩阵采用压缩存储后的缺点主要是（）。\nA.无法判断矩阵的行列数\nB.丧失随机存取的特性\nC.无法由行、列值查找某个矩阵元素\nD.使矩阵元素之间的逻辑关系更复杂\n10．下列关于矩阵的说法中，正确的是（）。\nI.在n（n>3）阶三对角矩阵中，每行都有3个非零元\nII.稀疏矩阵的特点是矩阵中的元素较少\nA.仅I\nB.仅II\nC.I和II\nD.无正确项",
+        "content": "稀疏矩阵采用压缩存储后的缺点主要是（）。\nA.无法判断矩阵的行列数\nB.丧失随机存取的特性\nC.无法由行、列值查找某个矩阵元素\nD.使矩阵元素之间的逻辑关系更复杂",
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [

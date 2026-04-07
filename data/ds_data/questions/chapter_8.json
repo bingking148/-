@@ -6,7 +6,7 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc811"
+            "kc0811"
         ],
         "related_questions": [
             {
@@ -30,7 +30,7 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc811"
+            "kc0811"
         ],
         "related_questions": [
             {
@@ -55,8 +55,8 @@
         "type": "concept",
         "knowledge_points": [
             "kc821",
-            "kc822",
-            "kc823"
+            "kc0822",
+            "kc0823"
         ],
         "related_questions": [
             {
@@ -81,8 +81,8 @@
         "type": "concept",
         "knowledge_points": [
             "kc821",
-            "kc822",
-            "kc823"
+            "kc0822",
+            "kc0823"
         ],
         "related_questions": [
             {
@@ -107,8 +107,8 @@
         "type": "concept",
         "knowledge_points": [
             "kc821",
-            "kc822",
-            "kc823"
+            "kc0822",
+            "kc0823"
         ],
         "related_questions": [
             {
@@ -133,8 +133,8 @@
         "type": "concept",
         "knowledge_points": [
             "kc821",
-            "kc822",
-            "kc823"
+            "kc0822",
+            "kc0823"
         ],
         "related_questions": [
             {
@@ -159,8 +159,8 @@
         "type": "concept",
         "knowledge_points": [
             "kc821",
-            "kc822",
-            "kc823"
+            "kc0822",
+            "kc0823"
         ],
         "related_questions": [
             {
@@ -185,8 +185,8 @@
         "type": "concept",
         "knowledge_points": [
             "kc821",
-            "kc822",
-            "kc823"
+            "kc0822",
+            "kc0823"
         ],
         "related_questions": [
             {
@@ -211,8 +211,8 @@
         "type": "concept",
         "knowledge_points": [
             "kc821",
-            "kc822",
-            "kc823"
+            "kc0822",
+            "kc0823"
         ],
         "related_questions": [
             {
@@ -237,8 +237,8 @@
         "type": "concept",
         "knowledge_points": [
             "kc821",
-            "kc822",
-            "kc823"
+            "kc0822",
+            "kc0823"
         ],
         "related_questions": [
             {
@@ -258,13 +258,13 @@
     {
         "id": "q082009",
         "title": "希尔排序增量与排序方法",
-        "content": "对序列{15,9,7,8,20,-1,4}采用希尔排序，经一趟后序列变为{15,-1,4,8,20,9,7}，则\n该次采用的增量是（）。\nA.1\nB.4\nC.3\nD.2\n10．若序列{15,9,7,8,20,-1,4}经一趟排序后变成{9,15,7,8,20,-1,4}，则采用的是（）\n方法。\nA.选择排序\nB.快速排序\nC.直接插入排序\nD.冒泡排序",
+        "content": "对序列{15,9,7,8,20,-1,4}采用希尔排序，经一趟后序列变为{15,-1,4,8,20,9,7}，则\n该次采用的增量是（）。\nA.1\nB.4\nC.3\nD.2",
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
             "kc821",
-            "kc822",
-            "kc823"
+            "kc0822",
+            "kc0823"
         ],
         "related_questions": [
             {
@@ -289,8 +289,8 @@
         "type": "concept",
         "knowledge_points": [
             "kc821",
-            "kc822",
-            "kc823"
+            "kc0822",
+            "kc0823"
         ],
         "related_questions": [
             {
@@ -315,8 +315,8 @@
         "type": "concept",
         "knowledge_points": [
             "kc821",
-            "kc822",
-            "kc823"
+            "kc0822",
+            "kc0823"
         ],
         "related_questions": [
             {
@@ -341,8 +341,8 @@
         "type": "concept",
         "knowledge_points": [
             "kc821",
-            "kc822",
-            "kc823"
+            "kc0822",
+            "kc0823"
         ],
         "related_questions": [
             {
@@ -367,8 +367,8 @@
         "type": "concept",
         "knowledge_points": [
             "kc821",
-            "kc822",
-            "kc823"
+            "kc0822",
+            "kc0823"
         ],
         "related_questions": [
             {
@@ -393,8 +393,8 @@
         "type": "concept",
         "knowledge_points": [
             "kc821",
-            "kc822",
-            "kc823"
+            "kc0822",
+            "kc0823"
         ],
         "related_questions": [
             {
@@ -419,8 +419,8 @@
         "type": "concept",
         "knowledge_points": [
             "kc821",
-            "kc822",
-            "kc823"
+            "kc0822",
+            "kc0823"
         ],
         "related_questions": [
             {
@@ -444,8 +444,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc831",
-            "kc832"
+            "kc0831",
+            "kc0832"
         ],
         "related_questions": [
             {
@@ -469,8 +469,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc831",
-            "kc832"
+            "kc0831",
+            "kc0832"
         ],
         "related_questions": [
             {
@@ -494,8 +494,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc831",
-            "kc832"
+            "kc0831",
+            "kc0832"
         ],
         "related_questions": [
             {
@@ -519,8 +519,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc831",
-            "kc832"
+            "kc0831",
+            "kc0832"
         ],
         "related_questions": [
             {
@@ -544,8 +544,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc831",
-            "kc832"
+            "kc0831",
+            "kc0832"
         ],
         "related_questions": [
             {
@@ -569,8 +569,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc831",
-            "kc832"
+            "kc0831",
+            "kc0832"
         ],
         "related_questions": [
             {
@@ -594,8 +594,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc831",
-            "kc832"
+            "kc0831",
+            "kc0832"
         ],
         "related_questions": [
             {
@@ -619,8 +619,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc831",
-            "kc832"
+            "kc0831",
+            "kc0832"
         ],
         "related_questions": [
             {
@@ -644,8 +644,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc831",
-            "kc832"
+            "kc0831",
+            "kc0832"
         ],
         "related_questions": [
             {
@@ -669,8 +669,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc831",
-            "kc832"
+            "kc0831",
+            "kc0832"
         ],
         "related_questions": [
             {
@@ -694,8 +694,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc831",
-            "kc832"
+            "kc0831",
+            "kc0832"
         ],
         "related_questions": [
             {
@@ -719,8 +719,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc831",
-            "kc832"
+            "kc0831",
+            "kc0832"
         ],
         "related_questions": [
             {
@@ -744,8 +744,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc831",
-            "kc832"
+            "kc0831",
+            "kc0832"
         ],
         "related_questions": [
             {
@@ -769,8 +769,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc831",
-            "kc832"
+            "kc0831",
+            "kc0832"
         ],
         "related_questions": [
             {
@@ -794,8 +794,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc831",
-            "kc832"
+            "kc0831",
+            "kc0832"
         ],
         "related_questions": [
             {
@@ -819,8 +819,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc831",
-            "kc832"
+            "kc0831",
+            "kc0832"
         ],
         "related_questions": [
             {
@@ -844,8 +844,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc831",
-            "kc832"
+            "kc0831",
+            "kc0832"
         ],
         "related_questions": [
             {
@@ -869,8 +869,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc831",
-            "kc832"
+            "kc0831",
+            "kc0832"
         ],
         "related_questions": [
             {
@@ -894,8 +894,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc841",
-            "kc842"
+            "kc0841",
+            "kc0842"
         ],
         "related_questions": [
             {
@@ -919,8 +919,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc841",
-            "kc842"
+            "kc0841",
+            "kc0842"
         ],
         "related_questions": [
             {
@@ -944,8 +944,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc841",
-            "kc842"
+            "kc0841",
+            "kc0842"
         ],
         "related_questions": [
             {
@@ -969,8 +969,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc841",
-            "kc842"
+            "kc0841",
+            "kc0842"
         ],
         "related_questions": [
             {
@@ -994,8 +994,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc841",
-            "kc842"
+            "kc0841",
+            "kc0842"
         ],
         "related_questions": [
             {
@@ -1019,8 +1019,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc841",
-            "kc842"
+            "kc0841",
+            "kc0842"
         ],
         "related_questions": [
             {
@@ -1044,8 +1044,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc841",
-            "kc842"
+            "kc0841",
+            "kc0842"
         ],
         "related_questions": [
             {
@@ -1069,8 +1069,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc841",
-            "kc842"
+            "kc0841",
+            "kc0842"
         ],
         "related_questions": [
             {
@@ -1094,8 +1094,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc841",
-            "kc842"
+            "kc0841",
+            "kc0842"
         ],
         "related_questions": [
             {
@@ -1119,8 +1119,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc841",
-            "kc842"
+            "kc0841",
+            "kc0842"
         ],
         "related_questions": [
             {
@@ -1144,8 +1144,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc841",
-            "kc842"
+            "kc0841",
+            "kc0842"
         ],
         "related_questions": [
             {
@@ -1169,8 +1169,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc841",
-            "kc842"
+            "kc0841",
+            "kc0842"
         ],
         "related_questions": [
             {
@@ -1194,8 +1194,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc841",
-            "kc842"
+            "kc0841",
+            "kc0842"
         ],
         "related_questions": [
             {
@@ -1219,8 +1219,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc841",
-            "kc842"
+            "kc0841",
+            "kc0842"
         ],
         "related_questions": [
             {
@@ -1244,8 +1244,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc841",
-            "kc842"
+            "kc0841",
+            "kc0842"
         ],
         "related_questions": [
             {
@@ -1269,8 +1269,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc841",
-            "kc842"
+            "kc0841",
+            "kc0842"
         ],
         "related_questions": [
             {
@@ -1294,8 +1294,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc841",
-            "kc842"
+            "kc0841",
+            "kc0842"
         ],
         "related_questions": [
             {
@@ -1319,8 +1319,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc841",
-            "kc842"
+            "kc0841",
+            "kc0842"
         ],
         "related_questions": [
             {
@@ -1344,8 +1344,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc841",
-            "kc842"
+            "kc0841",
+            "kc0842"
         ],
         "related_questions": [
             {
@@ -1369,8 +1369,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc841",
-            "kc842"
+            "kc0841",
+            "kc0842"
         ],
         "related_questions": [
             {
@@ -1390,13 +1390,13 @@
     {
         "id": "q085001",
         "title": "排序算法特性比较",
-        "content": "以下排序算法中，（）在一趟结束后不一定能选出一个元素放在其最终位置上。\nA.简单选择排序B.冒泡排序\nC.归并排序\nD.堆排序\n02．以下排序算法中，（）不需要进行关键字的比较。\nA.快速排序\nB.归并排序\nC.基数排序\nD.堆排序",
+        "content": "以下排序算法中，（）在一趟结束后不一定能选出一个元素放在其最终位置上。\nA.简单选择排序B.冒泡排序\nC.归并排序\nD.堆排序",
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc851",
-            "kc852",
-            "kc853"
+            "kc0851",
+            "kc0852",
+            "kc0853"
         ],
         "related_questions": [
             {
@@ -1420,9 +1420,9 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc851",
-            "kc852",
-            "kc853"
+            "kc0851",
+            "kc0852",
+            "kc0853"
         ],
         "related_questions": [
             {
@@ -1446,9 +1446,9 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc851",
-            "kc852",
-            "kc853"
+            "kc0851",
+            "kc0852",
+            "kc0853"
         ],
         "related_questions": [
             {
@@ -1472,9 +1472,9 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc851",
-            "kc852",
-            "kc853"
+            "kc0851",
+            "kc0852",
+            "kc0853"
         ],
         "related_questions": [
             {
@@ -1498,9 +1498,9 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc851",
-            "kc852",
-            "kc853"
+            "kc0851",
+            "kc0852",
+            "kc0853"
         ],
         "related_questions": [
             {
@@ -1524,9 +1524,9 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc851",
-            "kc852",
-            "kc853"
+            "kc0851",
+            "kc0852",
+            "kc0853"
         ],
         "related_questions": [
             {
@@ -1550,9 +1550,9 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc851",
-            "kc852",
-            "kc853"
+            "kc0851",
+            "kc0852",
+            "kc0853"
         ],
         "related_questions": [
             {
@@ -1576,9 +1576,9 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc851",
-            "kc852",
-            "kc853"
+            "kc0851",
+            "kc0852",
+            "kc0853"
         ],
         "related_questions": [
             {
@@ -1602,9 +1602,9 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc851",
-            "kc852",
-            "kc853"
+            "kc0851",
+            "kc0852",
+            "kc0853"
         ],
         "related_questions": [
             {
@@ -1628,9 +1628,9 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc851",
-            "kc852",
-            "kc853"
+            "kc0851",
+            "kc0852",
+            "kc0853"
         ],
         "related_questions": [
             {
@@ -1654,9 +1654,9 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc851",
-            "kc852",
-            "kc853"
+            "kc0851",
+            "kc0852",
+            "kc0853"
         ],
         "related_questions": [
             {
@@ -1680,9 +1680,9 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc851",
-            "kc852",
-            "kc853"
+            "kc0851",
+            "kc0852",
+            "kc0853"
         ],
         "related_questions": [
             {
@@ -1706,9 +1706,9 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc851",
-            "kc852",
-            "kc853"
+            "kc0851",
+            "kc0852",
+            "kc0853"
         ],
         "related_questions": [
             {
@@ -1732,9 +1732,9 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc851",
-            "kc852",
-            "kc853"
+            "kc0851",
+            "kc0852",
+            "kc0853"
         ],
         "related_questions": [
             {
@@ -1758,9 +1758,9 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc851",
-            "kc852",
-            "kc853"
+            "kc0851",
+            "kc0852",
+            "kc0853"
         ],
         "related_questions": [
             {
@@ -1784,9 +1784,9 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc851",
-            "kc852",
-            "kc853"
+            "kc0851",
+            "kc0852",
+            "kc0853"
         ],
         "related_questions": [
             {
@@ -1810,9 +1810,9 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc851",
-            "kc852",
-            "kc853"
+            "kc0851",
+            "kc0852",
+            "kc0853"
         ],
         "related_questions": [
             {
@@ -1836,9 +1836,9 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc851",
-            "kc852",
-            "kc853"
+            "kc0851",
+            "kc0852",
+            "kc0853"
         ],
         "related_questions": [
             {
@@ -1862,9 +1862,9 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc851",
-            "kc852",
-            "kc853"
+            "kc0851",
+            "kc0852",
+            "kc0853"
         ],
         "related_questions": [
             {
@@ -1888,8 +1888,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc861",
-            "kc862"
+            "kc0861",
+            "kc0862"
         ],
         "related_questions": [
             {
@@ -1913,8 +1913,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc861",
-            "kc862"
+            "kc0861",
+            "kc0862"
         ],
         "related_questions": [
             {
@@ -1938,8 +1938,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc861",
-            "kc862"
+            "kc0861",
+            "kc0862"
         ],
         "related_questions": [
             {
@@ -1963,8 +1963,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc861",
-            "kc862"
+            "kc0861",
+            "kc0862"
         ],
         "related_questions": [
             {
@@ -1988,8 +1988,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc861",
-            "kc862"
+            "kc0861",
+            "kc0862"
         ],
         "related_questions": [
             {
@@ -2009,12 +2009,12 @@
     {
         "id": "q086007",
         "title": "排序趟数与初始状态有关的算法",
-        "content": "排序趟数与序列的初始状态有关的排序算法是（）。\nA.直接插入排序\nB.二路归并排序\nC.快速排序D.堆排序\n08．对n个元素进行排序，其排序趟数肯定为n-1趟的排序算法是（）。\nA.直接插入排序和快速排序\nB.冒泡排序和快速排序\nC.简单选择排序和直接插入排序\nD.简单选择排序和冒泡排序",
+        "content": "排序趟数与序列的初始状态有关的排序算法是（）。\nA.直接插入排序\nB.二路归并排序\nC.快速排序D.堆排序",
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc861",
-            "kc862"
+            "kc0861",
+            "kc0862"
         ],
         "related_questions": [
             {
@@ -2038,8 +2038,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc861",
-            "kc862"
+            "kc0861",
+            "kc0862"
         ],
         "related_questions": [
             {
@@ -2063,8 +2063,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc861",
-            "kc862"
+            "kc0861",
+            "kc0862"
         ],
         "related_questions": [
             {
@@ -2088,8 +2088,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc861",
-            "kc862"
+            "kc0861",
+            "kc0862"
         ],
         "related_questions": [
             {
@@ -2113,8 +2113,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc861",
-            "kc862"
+            "kc0861",
+            "kc0862"
         ],
         "related_questions": [
             {
@@ -2138,8 +2138,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc861",
-            "kc862"
+            "kc0861",
+            "kc0862"
         ],
         "related_questions": [
             {
@@ -2163,8 +2163,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc861",
-            "kc862"
+            "kc0861",
+            "kc0862"
         ],
         "related_questions": [
             {
@@ -2188,8 +2188,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc861",
-            "kc862"
+            "kc0861",
+            "kc0862"
         ],
         "related_questions": [
             {
@@ -2213,8 +2213,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc861",
-            "kc862"
+            "kc0861",
+            "kc0862"
         ],
         "related_questions": [
             {
@@ -2238,8 +2238,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc861",
-            "kc862"
+            "kc0861",
+            "kc0862"
         ],
         "related_questions": [
             {
@@ -2263,8 +2263,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc861",
-            "kc862"
+            "kc0861",
+            "kc0862"
         ],
         "related_questions": [
             {
@@ -2288,8 +2288,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc861",
-            "kc862"
+            "kc0861",
+            "kc0862"
         ],
         "related_questions": [
             {
@@ -2313,8 +2313,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc861",
-            "kc862"
+            "kc0861",
+            "kc0862"
         ],
         "related_questions": [
             {
@@ -2338,8 +2338,8 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc861",
-            "kc862"
+            "kc0861",
+            "kc0862"
         ],
         "related_questions": [
             {
@@ -2363,11 +2363,11 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc871",
-            "kc872",
-            "kc873",
-            "kc874",
-            "kc875"
+            "kc0871",
+            "kc0872",
+            "kc0873",
+            "kc0874",
+            "kc0875"
         ],
         "related_questions": [
             {
@@ -2386,16 +2386,16 @@
     },
     {
         "id": "q087002",
-        "title": "下列关于外部排序的说法中，正确的是（）。\nA.置换选择排序得到的初始归并段的长度一定相等\nB.内外存交换数据的时间只占总排序时间的一小部分\nC.败者树是一棵完全二叉树\nD.外部排序不涉及对文件的读/写操作",
+        "title": "下列关于外部排序的说法中，正确的是（）。",
         "content": "下列关于外部排序的说法中，正确的是（）。\nA.置换选择排序得到的初始归并段的长度一定相等\nB.内外存交换数据的时间只占总排序时间的一小部分\nC.败者树是一棵完全二叉树\nD.外部排序不涉及对文件的读/写操作",
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc871",
-            "kc872",
-            "kc873",
-            "kc874",
-            "kc875"
+            "kc0871",
+            "kc0872",
+            "kc0873",
+            "kc0874",
+            "kc0875"
         ],
         "related_questions": [
             {
@@ -2419,11 +2419,11 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc871",
-            "kc872",
-            "kc873",
-            "kc874",
-            "kc875"
+            "kc0871",
+            "kc0872",
+            "kc0873",
+            "kc0874",
+            "kc0875"
         ],
         "related_questions": [
             {
@@ -2447,11 +2447,11 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc871",
-            "kc872",
-            "kc873",
-            "kc874",
-            "kc875"
+            "kc0871",
+            "kc0872",
+            "kc0873",
+            "kc0874",
+            "kc0875"
         ],
         "related_questions": [
             {
@@ -2475,11 +2475,11 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc871",
-            "kc872",
-            "kc873",
-            "kc874",
-            "kc875"
+            "kc0871",
+            "kc0872",
+            "kc0873",
+            "kc0874",
+            "kc0875"
         ],
         "related_questions": [
             {
@@ -2503,11 +2503,11 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc871",
-            "kc872",
-            "kc873",
-            "kc874",
-            "kc875"
+            "kc0871",
+            "kc0872",
+            "kc0873",
+            "kc0874",
+            "kc0875"
         ],
         "related_questions": [
             {
@@ -2531,11 +2531,11 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc871",
-            "kc872",
-            "kc873",
-            "kc874",
-            "kc875"
+            "kc0871",
+            "kc0872",
+            "kc0873",
+            "kc0874",
+            "kc0875"
         ],
         "related_questions": [
             {
@@ -2559,11 +2559,11 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc871",
-            "kc872",
-            "kc873",
-            "kc874",
-            "kc875"
+            "kc0871",
+            "kc0872",
+            "kc0873",
+            "kc0874",
+            "kc0875"
         ],
         "related_questions": [
             {
@@ -2587,11 +2587,11 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc871",
-            "kc872",
-            "kc873",
-            "kc874",
-            "kc875"
+            "kc0871",
+            "kc0872",
+            "kc0873",
+            "kc0874",
+            "kc0875"
         ],
         "related_questions": [
             {
@@ -2615,11 +2615,11 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc871",
-            "kc872",
-            "kc873",
-            "kc874",
-            "kc875"
+            "kc0871",
+            "kc0872",
+            "kc0873",
+            "kc0874",
+            "kc0875"
         ],
         "related_questions": [
             {
@@ -2643,11 +2643,11 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc871",
-            "kc872",
-            "kc873",
-            "kc874",
-            "kc875"
+            "kc0871",
+            "kc0872",
+            "kc0873",
+            "kc0874",
+            "kc0875"
         ],
         "related_questions": [
             {
@@ -2671,11 +2671,11 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc871",
-            "kc872",
-            "kc873",
-            "kc874",
-            "kc875"
+            "kc0871",
+            "kc0872",
+            "kc0873",
+            "kc0874",
+            "kc0875"
         ],
         "related_questions": [
             {
@@ -2699,11 +2699,11 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc871",
-            "kc872",
-            "kc873",
-            "kc874",
-            "kc875"
+            "kc0871",
+            "kc0872",
+            "kc0873",
+            "kc0874",
+            "kc0875"
         ],
         "related_questions": [
             {
@@ -2727,11 +2727,11 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc871",
-            "kc872",
-            "kc873",
-            "kc874",
-            "kc875"
+            "kc0871",
+            "kc0872",
+            "kc0873",
+            "kc0874",
+            "kc0875"
         ],
         "related_questions": [
             {
@@ -2755,11 +2755,11 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc871",
-            "kc872",
-            "kc873",
-            "kc874",
-            "kc875"
+            "kc0871",
+            "kc0872",
+            "kc0873",
+            "kc0874",
+            "kc0875"
         ],
         "related_questions": [
             {
@@ -2783,11 +2783,11 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc871",
-            "kc872",
-            "kc873",
-            "kc874",
-            "kc875"
+            "kc0871",
+            "kc0872",
+            "kc0873",
+            "kc0874",
+            "kc0875"
         ],
         "related_questions": [
             {
@@ -2811,11 +2811,11 @@
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
-            "kc871",
-            "kc872",
-            "kc873",
-            "kc874",
-            "kc875"
+            "kc0871",
+            "kc0872",
+            "kc0873",
+            "kc0874",
+            "kc0875"
         ],
         "related_questions": [
             {

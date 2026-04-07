@@ -550,7 +550,12 @@ export const APIService = {
 
     const result: Record<string, string[]> = {};
     for (const [key, value] of Object.entries(data)) {
-      result[key] = Array.isArray(value) ? value.filter((id) => typeof id === 'string') : [];
+      if (Array.isArray(value)) {
+        const seen = new Set<string>();
+        result[key] = value.filter((id) => typeof id === 'string' && !seen.has(id) && seen.add(id));
+      } else {
+        result[key] = [];
+      }
     }
     return result;
   },

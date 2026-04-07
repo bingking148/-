@@ -227,7 +227,7 @@
     {
         "id": "q012007",
         "title": "算法时间复杂度与频度分析",
-        "content": "下列算法的时间复杂度为（）。\nvoid fun(int n){\n第1章绪\n论\nint i=0;\nwhile(i*i*i<=n)\ni++;\nA. O(n)\nB. O(nlog2n)\nC. 0(n)\nD. 0(√n)\n08．某个程序段如下：\nfor(i=n-l;i>1;i--)\nfor(j=1;j<i;j++)\nif(A[j]>A[j+1])\nA[j]与A[j+1]对换；\n其中n为正整数，则最后一行语句的频度在最坏情况下是（）。\nA. O(n)\nB. O(nlog2n)\nC. 0(n)\nD. O(m²)",
+        "content": "下列算法的时间复杂度为（）。\nvoid fun(int n){\n第1章绪\n论\nint i=0;\nwhile(i*i*i<=n)\ni++;\nA. O(n)\nB. O(nlog2n)\nC. 0(n)\nD. 0(√n)",
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
@@ -252,7 +252,7 @@
     {
         "id": "q012009",
         "title": "程序段时间复杂度与算法执行次数分析",
-        "content": "下列程序段的时间复杂度为（）。\nif(n>=0）{\nfor（int i=0;i<n;i++)\nfor（int j=0;j<n;j++)\nprintf（\"输入数据大于或等于零\\n\")\nelset\nfor（int j=0;j<n;j++)\nprintf（\"输入数据小于零\\n\"）\n{\nA. 0(n²)\nB. O(n)\nC. 0(1)\nD. O(nlog2n)\n10．下列算法中加下画线的语句的执行次数为（）。\nint m=0,i，j;\nfor（i=1;i<=n;i++)\nfor(j=1;j<=2*i;j++)\nm++;\nA.n(n+1)\nB.n\nC. n+1\nD. n²\n11.\n下列函数代码的时间复杂度是（）。\nint Func（int n){\nif（n==1) return 1;\nelse return 2*Func(n/2)+n;\nA. O(n)\nB. O(nlog2n)\nC. O(log2n)\nD. 0(n²)",
+        "content": "下列程序段的时间复杂度为（）。\nif(n>=0）{\nfor（int i=0;i<n;i++)\nfor（int j=0;j<n;j++)\nprintf（\"输入数据大于或等于零\\n\")\nelset\nfor（int j=0;j<n;j++)\nprintf（\"输入数据小于零\\n\"）\n{\nA. 0(n²)\nB. O(n)\nC. 0(1)\nD. O(nlog2n)",
         "difficulty": "integer",
         "type": "concept",
         "knowledge_points": [
